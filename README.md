@@ -1,83 +1,83 @@
-# Cybersecurity Awareness Game 🛡️🎮
+# Cybersecurity Awareness Application
 
-A gamified mobile application built with **Flutter** and **Dart** designed to train and educate users on essential cybersecurity habits through interactive scenarios, real-time feedback, and engaging game mechanics.
-
----
-
-## 🌟 Overview
-
-Cyber threats such as phishing and credential theft disproportionately target end-user awareness. This application transforms cybersecurity education into an interactive learning experience, empowering users to recognize real-world threats (social engineering, deceptive email templates, insecure passwords, untrusted media) through practical simulation rather than passive reading.
+A mobile training application developed with **Flutter** and **Dart**, designed to improve cybersecurity awareness and threat recognition through interactive simulation and gamified learning mechanics.
 
 ---
 
-## ✨ Key Features & Modules
+## Overview
 
-### 🎯 Interactive Missions & Simulations
-* **🎣 Phishing Email Detection (`scenariu_email.dart`):**
-  * A full email client simulation displaying realistic sender addresses, urgency triggers, and suspicious hyperlinks.
-  * Users evaluate incoming messages, mark them as safe or suspicious, and receive immediate educational explanations for their decisions.
-* **🔑 Password Strength & Hygiene (`scenariu_parola.dart`):**
-  * Interactive challenges testing password entropy, length, character variety, and resistance to common attack vectors.
-* **💾 Physical Security / USB Devices (`scenariu_joc.dart`):**
-  * Scenarios addressing the dangers of untrusted portable storage devices and social engineering tactics in physical spaces.
-
-### 🏆 Gamification System
-* **🐾 Evolving Cyber Mascot / Companion:**
-  * A dynamic virtual companion embedded into the dashboard that evolves visually across 3 stages (`Novice`, `Intermediate`, `Cyber Expert`) as players earn XP.
-* **📈 Real-Time XP & Level Progression:**
-  * Animated XP progress bar and level indicators reflecting the user's current mastery.
-* **🏅 Badges & Achievement Showcase (`badges.dart`):**
-  * Milestone badges unlocked through gameplay achievements (e.g., *Welcome*, *Phishing Expert*, *Password Guardian*, *Physical Shield*, *Cyber Master*).
-* **🥇 Leaderboard & Competition (`leaderboard.dart`):**
-  * Competitive ranking table designed to motivate continuous training.
-
-### 🎨 UI & Design Architecture
-* **Figma-inspired Material 3 Design (`theme.dart`):**
-  * Clean, cohesive visual palette featuring vibrant accent blues, distinct card elevations, and custom rounded surfaces.
-* **Bottom Navigation Wrapper (`navigation_wrapper.dart`):**
-  * Intuitive bottom tab navigation connecting Dashboard, Badges, Leaderboard, and Settings.
+Social engineering vectors, particularly phishing attacks and credential harvesting, rely primarily on exploiting end-user habits rather than technical infrastructure vulnerabilities. This project provides an experiential training platform that simulates common threat vectors in a safe environment, offering immediate explanatory feedback and quantifiable skill progression.
 
 ---
 
-## 🛠️ Tech Stack
+## Modules and Key Capabilities
 
-* **Framework:** [Flutter](https://flutter.dev/) (Multi-platform: Android, iOS, Web, Desktop)
+### Interactive Training Scenarios
+* **Phishing Email Simulation (`scenariu_email.dart`):**
+  * A dedicated email client interface rendering realistic sender metadata, urgency cues, and deceptive hyperlinks.
+  * Users inspect messages and categorize them as legitimate or malicious, receiving contextual post-decision feedback detailing specific indicators of compromise.
+* **Password Security and Entropy (`scenariu_parola.dart`):**
+  * Practical exercises evaluating password complexity, length requirements, and resilience against standard dictionary and brute-force patterns.
+* **Physical Device Security (`scenariu_joc.dart`):**
+  * Interactive scenarios addressing unauthorized removable media (e.g., untrusted USB devices) and social engineering in physical workplace settings.
+
+### Progression and Gamification Architecture
+* **Adaptive Companion System:**
+  * An embedded visual companion on the primary dashboard that transitions across three distinct mastery tiers (Novice, Intermediate, Cyber Expert) corresponding to accumulated experience points (XP).
+* **Experience Points and Level Tracking:**
+  * Visual progress indicators reflecting real-time training advancement and completion metrics.
+* **Achievement and Badge Matrix (`badges.dart`):**
+  * Grid-based milestone system unlocking recognition awards for completed training modules (e.g., Phishing Analysis, Credential Hygiene, Physical Security).
+* **Leaderboard (`leaderboard.dart`):**
+  * Performance ranking interface intended to support institutional or peer-group competitive engagement.
+
+### User Interface Architecture
+* **Design System (`theme.dart`):**
+  * Cohesive Material 3 implementation based on structured UI specifications, utilizing distinct visual hierarchy and standardized typography.
+* **Navigation Architecture (`navigation_wrapper.dart`):**
+  * Persistent bottom navigation management enabling transitions between Dashboard, Badges, Leaderboard, and Settings views.
+
+---
+
+## Tech Stack
+
+* **Framework:** [Flutter](https://flutter.dev/) (Cross-platform runtime targeting Android, iOS, Web, and Desktop)
 * **Language:** [Dart](https://dart.dev/)
-* **UI & Styling:** Material 3, Custom Design System (`AppColors`)
-* **State Management:** Flutter `StatefulWidget` & reactive setState model
+* **UI Framework:** Material Design 3, Custom Design Palette (`AppColors`)
+* **State Management:** Flutter `StatefulWidget` reactive state handling
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 lib/
-├── main.dart                      # Application entry point & theme setup
-├── theme.dart                     # Custom color palette & design constants
+├── main.dart                      # Application bootstrap and theme initialization
+├── theme.dart                     # Color specifications and UI tokens
 ├── models/
-│   └── email_model.dart           # Phishing scenario data models & email templates
+│   └── email_model.dart           # Phishing scenario data definitions and templates
 ├── screens/
-│   ├── dashboard.dart             # Main hub: missions, XP bar, evolving cyber pet
-│   ├── scenariu_email.dart        # Interactive phishing simulation screen
-│   ├── scenariu_parola.dart       # Password strength training screen
-│   ├── scenariu_joc.dart          # General security mini-game screen
-│   ├── badges.dart                # Achievement badge gallery
-│   ├── leaderboard.dart           # User rankings and score table
-│   └── settings.dart              # User preferences & configurations
+│   ├── dashboard.dart             # Primary overview, active missions, progress tracking
+│   ├── scenariu_email.dart        # Phishing identification simulation
+│   ├── scenariu_parola.dart       # Password strength training interface
+│   ├── scenariu_joc.dart          # General security scenario mini-game
+│   ├── badges.dart                # Achievement and milestone gallery
+│   ├── leaderboard.dart           # User rankings and score comparison
+│   └── settings.dart              # User preferences
 └── widgets/
-    ├── navigation_wrapper.dart    # Bottom navigation bar & persistent view switcher
-    └── mission_card.dart          # Reusable mission launcher cards
+    ├── navigation_wrapper.dart    # Root view switcher and bottom navigation bar
+    └── mission_card.dart          # Reusable scenario launcher component
 ```
 
 ---
 
-## 🚀 Getting Started
+## Local Setup and Execution
 
 ### Prerequisites
-* [Flutter SDK](https://docs.flutter.dev/get-started/install) (version 3.10+ recommended)
-* An Android emulator, physical device, or Chrome browser
+* [Flutter SDK](https://docs.flutter.dev/get-started/install) (version 3.10 or higher)
+* Android Studio / Android Emulator, physical mobile device, or Google Chrome
 
-### Installation & Run
+### Running the Application
 
 1. **Clone the repository:**
    ```bash
@@ -85,16 +85,16 @@ lib/
    cd cybersecurity-awareness-app
    ```
 
-2. **Install Flutter dependencies:**
+2. **Retrieve project dependencies:**
    ```bash
    flutter pub get
    ```
 
-3. **Run the application:**
+3. **Launch the application:**
    ```bash
-   # Run on connected device or emulator:
+   # Run on an active emulator or connected mobile device:
    flutter run
 
-   # Or run directly on Chrome:
+   # Or execute in a web browser:
    flutter run -d chrome
    ```
